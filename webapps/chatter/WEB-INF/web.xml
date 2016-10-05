@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+				http://xmlns.jcp.org/ns/javaee/web-app_4_0.xsd"
+	version="2.4">
+
+<!--
+	To add more servlets use bellow
+<servlet>
+	<servlet-name>MAKE UNIQUE NAME HERE</servlet-name>
+	<servlet-class>.class file in WEB-INF/classes dir</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>SAME NAME AS MADE ABOVE</servlet-name>
+	<url-pattern>MAKE UNIQUE PATH HERE</url-patter>
+</servlet-mapping>
+-->
+
+<servlet>
+	<servlet-name>LoginPage</servlet-name>
+	<servlet-class>LoginServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>LoginPage</servlet-name>
+	<url-pattern>/Login</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>AddUserPage</servlet-name>
+	<servlet-class>AddUserServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>AddUserPage</servlet-name>
+	<url-pattern>/AddUser</url-pattern>
+</servlet-mapping>
+
+
+</web-app>

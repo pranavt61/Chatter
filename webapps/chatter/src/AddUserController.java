@@ -7,7 +7,7 @@ public class AddUserController extends HttpServlet
 	public void doGet(HttpServletRequest req, HttpServletResponse res)
 	 throws IOException, ServletException
 	{
-		
+		req.getRequestDispatcher("addUser.jsp").forward(req,res);
 	}
 
 	public void doPost(HttpServletRequest req, HttpServletResponse res)
@@ -19,7 +19,6 @@ public class AddUserController extends HttpServlet
 		RequestDispatcher view = req.getRequestDispatcher("index.jsp");
 		
 		UserModel.addUser(name,pass);
-		
 
 		view.forward(req,res);
 	}

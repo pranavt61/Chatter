@@ -1,10 +1,11 @@
 import javax.servlet.*;
 import javax.servlet.http.*;
+import java.io.*;
 
-public class AuthController extends HTTPServlet
+public class AuthController extends HttpServlet
 {
 	public void doGet(HttpServletRequest req, HttpServletResponse res)
-	throws IOExeption, ServletExeption
+	throws IOException, ServletException
 	{
 		req.setAttribute("error", false);
 		RequestDispatcher view = req.getRequestDispatcher("/index.jsp");
@@ -12,7 +13,7 @@ public class AuthController extends HTTPServlet
 	}
 
 	public void doPost(HttpServletRequest req, HttpServletResponse res)
-	throws IOExeption, ServletExeption
+	throws IOException, ServletException
 	{
 		String name = req.getParameter("username");
 		String pass = req.getParameter("password");

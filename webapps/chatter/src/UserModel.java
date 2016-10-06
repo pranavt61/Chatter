@@ -4,12 +4,12 @@ public class UserModel
 {
 
 	private static LinkedList<UserModel> users = new LinkedList<UserModel>();
-	private static nextID = 0;
+	private static int nextID = 0;
 	public static void Init()
 	{
 		//init static variables here from Database
 	}
-	
+
 	public static UserModel getUser(String n)
 	{
 		for(UserModel u: users)

@@ -6,9 +6,9 @@ RUN apt-get install -y git && apt-get install -y vim && apt-get clean
 
 ADD conf/tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
 
-#replace "servlet" with webapp name
-ADD webapps/servlet/WEB-INF /usr/local/tomcat/webapps/servlet/WEB-INF
-Add webapps/servlet/WEB-INF/classes/*.class /usr/local/tomcat/webapps/servlet/WEB-INF/classes/
-ADD webapps/servlet/*.jsp /usr/local/tomcat/webapps/servlet/
+#replace "chatter" with webapp name
+ADD webapps/chatter/WEB-INF /usr/local/tomcat/webapps/chatter/WEB-INF
+Add webapps/chatter/WEB-INF/classes/*.class /usr/local/tomcat/webapps/chatter/WEB-INF/classes/
+ADD webapps/chatter/*.jsp /usr/local/tomcat/webapps/chatter/
 
 ENTRYPOINT ["bash"]

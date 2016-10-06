@@ -22,7 +22,7 @@ public class AuthController extends HttpServlet
 		
 		if(user != null)
 		{
-			req.setAttribute("user", user);
+			req.setAttribute("user", user.getName());
 
 			//Add user ID for future Auth
 			Cookie userID = new Cookie("UserID", user.getID() + "");

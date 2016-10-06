@@ -25,7 +25,7 @@ public class AuthController extends HttpServlet
 			req.setAttribute("user", user);
 
 			//Add user ID for future Auth
-			Cookie userID = new Cookie("UserID", user.getID().toString());
+			Cookie userID = new Cookie("UserID", user.getID() + "");
 			userID.setMaxAge(60*60*24);
 			res.addCookie(userID);
 

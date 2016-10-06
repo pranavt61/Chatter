@@ -7,7 +7,7 @@ public class AddUserController extends HttpServlet
 	public void doGet(HttpServletRequest req, HttpServletResponse res)
 	 throws IOException, ServletException
 	{
-		req.getRequestDispatcher("addUser.jsp").forward(req,res);
+		req.getRequestDispatcher("AddUser.jsp").forward(req,res);
 	}
 
 	public void doPost(HttpServletRequest req, HttpServletResponse res)

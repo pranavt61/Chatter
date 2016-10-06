@@ -27,7 +27,7 @@ public class ChatterModel
 	public ChatterModel(UserModel owner)
 	{
 		ID = nextID++;
-		ownerID = ownerID.getID();
+		ownerID = owner.getID();
 		message = "<p>Enter your Chatter here</p>";
 	}
 	public int getID(){return ID;}

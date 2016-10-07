@@ -1,7 +1,6 @@
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.*;
-import org.junit.*;
 
 public class AuthController extends HttpServlet
 {

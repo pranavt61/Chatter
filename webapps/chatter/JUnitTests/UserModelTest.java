@@ -1,4 +1,5 @@
 import org.junit.*;
+import java.io.*;
 
 public class UserModelTest
 {
@@ -22,7 +23,7 @@ public class UserModelTest
 	{
 		int numUsers = 10;
 		populateUserList(numUsers);
-
+		System.out.println(UserModel.getNextID() + " : " + numUsers);
 		Assert.assertTrue(UserModel.getNextID() == numUsers);
 	}
 
@@ -48,7 +49,7 @@ public class UserModelTest
 		populateUserList(numUsers);
 
 		for(int i = 0; i < numUsers; i++)
-			if(UserModel.getUser("User " + i) != null)
+			if(UserModel.getUser("User " + i) == null)
 				validTest = false;
 
 		Assert.assertTrue(validTest);

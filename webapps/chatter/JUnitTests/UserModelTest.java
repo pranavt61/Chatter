@@ -24,9 +24,10 @@ public class UserModelTest
 	public void populateUserListTest()
 	{
 		int numUsers = 10;
+		int lastnumUsers = UserModel.getNextID();
 		populateUserList(numUsers);
-		System.out.println(UserModel.getNextID() + " : " + numUsers);
-		Assert.assertTrue(UserModel.getNextID() == numUsers);
+		System.out.println(UserModel.getNextID() + " : " + (numUsers + lastnumUsers));
+		Assert.assertTrue(UserModel.getNextID() == numUsers + lastnumUsers);
 	}
 
 	@Test

@@ -4,20 +4,24 @@ public class UserModelTest
 {
 
 	//Static Tests 
-	int numUsers = 10;
-
-	@Test
-	public void populateUserListTest()
+	void populateUserList(int num)
 	{
-		String[] names = new String[numUsers];
-		String[] pass = new String[numUsers];
+		String[] names = new String[num];
+		String[] pass = new String[num];
 
-		for(int i = 0; i < numUsers; i++)
+		for(int i = 0; i < num; i++)
 		{
 			names[i] = "User " + i;
 			pass[i] = "Pass " + i;
 			UserModel.addUser(new UserModel(names[i], pass[i]));
 		}
+	}
+
+	@Test
+	public void populateUserListTest()
+	{
+		int numUsers = 10;
+		populateUserList(numUsers);
 
 		Assert.assertTrue(UserModel.getNextID() == numUsers);
 	}
@@ -26,6 +30,8 @@ public class UserModelTest
 	public void getUserFromIDTest()
 	{
 		boolean validTest = true;
+		int numUsers = 10;
+		populateUserList(numUsers);
 
 		for(int i = 0; i < numUsers; i++)
 			if(!UserModel.getUser(i).getName().equals("User " + i))
@@ -38,6 +44,8 @@ public class UserModelTest
 	public void getUserFromNameTest()
 	{
 		boolean validTest = true;
+		int numUsers = 10;
+		populateUserList(numUsers);
 
 		for(int i = 0; i < numUsers; i++)
 			if(UserModel.getUser("User " + i).getID() != i)
@@ -50,6 +58,8 @@ public class UserModelTest
 	public void authUserTest()
 	{
 		boolean validTest = true;
+		int numUsers = 10;
+		populateUserList(numUsers);
 
 		for(int i = 0; i < numUsers; i++)
 			if(UserModel.authUser("User " + i, "Pass " + i) == null)

@@ -19,7 +19,7 @@ public class UserModelTest
 			UserModel.addUser(new UserModel(names[i], pass[i]));
 		}
 
-		Assert.assertTrue(UserModel.lastID == numUsers);
+		Assert.assertTrue(UserModel.nextID == numUsers);
 	}
 
 	@Test
@@ -52,7 +52,7 @@ public class UserModelTest
 		boolean validTest = true;
 
 		for(int i = 0; i < numUsers; i++)
-			if(UserModel.authuser("User " + i, "Pass " + i) == null)
+			if(UserModel.authUser("User " + i, "Pass " + i) == null)
 				validTest = false;
 
 		Assert.assertTrue(validTest);
@@ -76,7 +76,7 @@ public class UserModelTest
 	{
 		String name = "name";
 		String pass = "pass";
-		int lastID = UserModel.lastID;
+		int lastID = UserModel.nextID;
 
 		UserModel user = new UserModel(name, pass); 
 

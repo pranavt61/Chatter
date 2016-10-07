@@ -10,6 +10,8 @@ public class UserModel
 		//init static variables here from Database
 	}
 
+	public static int getNextID(){return nextID;}
+	
 	public static UserModel getUser(String n)
 	{
 		for(UserModel u: users)

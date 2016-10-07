@@ -28,9 +28,9 @@ public class UserModel
 		return null;
 	}
 
-	public static void addUser(String n, String p)
+	public static void addUser(UserModel user)
 	{
-		users.add(new UserModel(n,p));
+		users.add(user);
 	}
 
 	public static UserModel authUser(String n, String p)

@@ -18,7 +18,7 @@ public class AddUserController extends HttpServlet
 		req.setAttribute("error", false);
 		RequestDispatcher view = req.getRequestDispatcher("index.jsp");
 		
-		UserModel.addUser(name,pass);
+		UserModel.addUser(new UserModel(name,pass));
 
 		view.forward(req,res);
 	}

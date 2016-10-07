@@ -1,6 +1,8 @@
 import org.junit.*;
 import java.io.*;
 
+// TODO: Edit run Test shell script to only run test if compilation without errors
+
 public class UserModelTest
 {
 
@@ -76,8 +78,8 @@ public class UserModelTest
 	{
 		String name = "name";
 		String pass = "pass";
-
-		UserModel.addUser(new UserModel(name,pass));
+		UserModel user = new UserModel(name, pass);
+		UserModel.addUser(user);
 		Assert.assertTrue(user.getName().equals(name));
 	}
 
@@ -88,7 +90,8 @@ public class UserModelTest
 		String pass = "pass";
 		int lastID = UserModel.getNextID();
 
-		UserModel.addUser(new UserModel(name,pass));
+		UserModel user = new UserModel(name, pass);
+		UserModel.addUser(user);
 		Assert.assertTrue(user.getID() == (lastID));
 	}
 

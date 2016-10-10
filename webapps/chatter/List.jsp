@@ -1,4 +1,4 @@
-<%@ page import="UserModel"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
 	<title>${user.name}</title>
@@ -6,6 +6,11 @@
 <body>
 	<h1>Welocome</h1>
 	<p>ID:${user.name}</p>
-	<p>Test:<%=session.getAttribute("user").name%></p>
+	<c:if test="${user.name eq 'PT'}">
+		<p>EL Worked</p>
+	</c:if>
+	<c:if test="${user.name eq 'not PT'}">
+		<p>Breh</p>
+	</c:if>
 </body>
 </html>

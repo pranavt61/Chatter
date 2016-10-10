@@ -36,7 +36,7 @@
 	<servlet-name>AddUserServlet</servlet-name>
 	<url-pattern>/AddUser</url-pattern>
 </servlet-mapping>
-
+<!--
 <servlet>
 	<servlet-name>ChatterServlet</servlet-name>
 	<servlet-class>ChatterController</servlet-class>
@@ -45,4 +45,5 @@
 	<servlet-name>ChatterServlet</servlet-name>
 	<url-pattern>/Chatter</url-pattern>
 </servlet-mapping>
+-->
 </web-app>

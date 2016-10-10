@@ -1,9 +1,9 @@
 <html>
 <head>
-	<title><%=request.getAttribute("user")%>'s list</title>
+	<title><%=session.getAttribute("user").getName()%>'s list</title>
 </head>
 <body>
 	<h1>Welocome</h1>
-	<p>ID:<%=request.getAttribute("user")%></p>
+	<p>ID:<%=session.getAttribute("user").getName()%></p>
 </body>
 </html>

@@ -16,10 +16,7 @@ public class ChatterController extends HttpServlet
 			//No user Logged in, send back to login
 			view = req.getRequestDispatcher("/index.jsp");
 		else
-		{
-			req.setAttribute("user", session.getAttribute("user"));
 			view = req.getRequestDispatcher("/List.jsp");
-		}
 
 		view.forward(req,res);
 	}

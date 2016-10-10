@@ -1,3 +1,5 @@
+<%@page import="UserModel"%>
+
 <%!UserModel user = session.getAttribute("user");%>
 <html>
 <head>

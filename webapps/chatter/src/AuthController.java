@@ -4,16 +4,8 @@ import java.io.*;
 
 public class AuthController extends HttpServlet
 {
-	public void doGet(HttpServletRequest req, HttpServletResponse res)
-	throws IOException, ServletException
-	{
-		req.setAttribute("error", false);
-		RequestDispatcher view = req.getRequestDispatcher("/index.jsp");
-		view.forward(req,res);
-	}
-
 	public void doPost(HttpServletRequest req, HttpServletResponse res)
-	throws IOException, ServletException
+	 throws IOException, ServletException
 	{
 		String name = req.getParameter("username");
 		String pass = req.getParameter("password");
@@ -34,6 +26,14 @@ public class AuthController extends HttpServlet
 			req.setAttribute("error", true);
 			view = req.getRequestDispatcher("/index.jsp");
 		}
+		view.forward(req,res);
+	}
+	
+	public void doGet(HttpServletRequest req, HttpServletResponse res)
+	throws IOException, ServletException
+	{
+		req.setAttribute("error", false);
+		RequestDispatcher view = req.getRequestDispatcher("/index.jsp");
 		view.forward(req,res);
 	}
 }

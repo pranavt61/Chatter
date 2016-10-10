@@ -1,12 +1,11 @@
-<%@page import="UserModel"%>
+<%@tablib uri="http://java.sun.com/jsp/jst1/core" prefix="c"%>
 
-<%!UserModel user = session.getAttribute("user");%>
 <html>
 <head>
-	<title><%=user.getName()%>'s list</title>
+	<title>${user.name}</title>
 </head>
 <body>
 	<h1>Welocome</h1>
-	<p>ID:<%=user.getName()%></p>
+	<p>ID:${user.name}</p>
 </body>
 </html>

@@ -44,10 +44,10 @@ public class UserModel
 		return null;
 	}
 
-	private String name;
+	public String name;
 	private String pass;
-	private LinkedList<ChatterModel> chatters;
-	private int ID;
+	public LinkedList<ChatterModel> chatters;
+	public int ID;
 
 	public UserModel(String n, String p)
 	{

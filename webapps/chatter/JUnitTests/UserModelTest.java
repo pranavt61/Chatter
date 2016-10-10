@@ -25,8 +25,8 @@ public class UserModelTest
 	{
 		int numUsers = 10;
 		int lastnumUsers = UserModel.getNextID();
+
 		populateUserList(numUsers);
-		System.out.println(UserModel.getNextID() + " : " + (numUsers + lastnumUsers));
 		Assert.assertTrue(UserModel.getNextID() == numUsers + lastnumUsers);
 	}
 
@@ -35,6 +35,7 @@ public class UserModelTest
 	{
 		boolean validTest = true;
 		int numUsers = 10;
+		
 		populateUserList(numUsers);
 
 		for(int i = 0; i < numUsers; i++)

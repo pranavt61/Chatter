@@ -19,18 +19,14 @@ public class AuthController extends HttpServlet
 		String pass = req.getParameter("password");
 		UserModel user = UserModel.authUser(name, pass);
 		RequestDispatcher view;
+		HttpSession session;
 		
 		if(user != null)
 		{
-			req.setAttribute("user", user.getName());
-
 			//Add user ID for future Auth
-			Cookie userID = new Cookie("UserID", user.getID() + "");
-			userID.setMaxAge(60*60*24);
-			res.addCookie(userID);
-
-			view = req.getRequestDispatcher("/List.jsp");
-
+			session = req.getSession();
+			session.setAttribute("user", name);
+			view = req.getRequestDispatcher("/Chatter");
 		}
 		else
 		{

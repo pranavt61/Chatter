@@ -23,7 +23,6 @@
 	<servlet-name>LoginServlet</servlet-name>
 	<servlet-class>AuthController</servlet-class>
 </servlet>
-
 <servlet-mapping>
 	<servlet-name>LoginServlet</servlet-name>
 	<url-pattern>/Login</url-pattern>
@@ -33,9 +32,17 @@
 	<servlet-name>AddUserServlet</servlet-name>
 	<servlet-class>AddUserController</servlet-class>
 </servlet>
-
 <servlet-mapping>
 	<servlet-name>AddUserServlet</servlet-name>
 	<url-pattern>/AddUser</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>ChatterServlet</servlet-name>
+	<servlet-class>ChatterController</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>ChatterServlet</servlet-name>
+	<url-pattern>/Chatter</url-pattern>
 </servlet-mapping>
 </web-app>

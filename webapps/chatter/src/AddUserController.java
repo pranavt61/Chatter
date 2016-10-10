@@ -16,7 +16,7 @@ public class AddUserController extends HttpServlet
 		String name = req.getParameter("username");
 		String pass = req.getParameter("password");
 		req.setAttribute("error", false);
-		RequestDispatcher view = req.getRequestDispatcher("index.jsp");
+		RequestDispatcher view = req.getRequestDispatcher("/index.jsp");
 		
 		UserModel.addUser(new UserModel(name,pass));
 

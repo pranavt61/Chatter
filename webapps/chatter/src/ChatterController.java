@@ -23,4 +23,9 @@ public class ChatterController extends HttpServlet
 
 		view.forward(req,res);
 	}
+	public void doPost(HttpServletRequest req, HttpServletResponse res)
+	throws IOException, ServletException
+	{
+		doGet(req,res);
+	}
 }

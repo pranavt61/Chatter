@@ -18,7 +18,7 @@ public class AuthController extends HttpServlet
 			//Add user ID for future Auth
 			session = req.getSession();
 			session.setAttribute("user", name);
-			view = req.getRequestDispatcher("/Chatter");
+			view = req.getRequestDispatcher("Chatter");
 		}
 		else
 		{
@@ -28,7 +28,7 @@ public class AuthController extends HttpServlet
 		}
 		view.forward(req,res);
 	}
-	
+
 	public void doGet(HttpServletRequest req, HttpServletResponse res)
 	throws IOException, ServletException
 	{

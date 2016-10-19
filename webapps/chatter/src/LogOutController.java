@@ -2,7 +2,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.*;
 
-public class ChatterController extends HttpServlet
+public class LogOutController extends HttpServlet
 {
 	public void doGet(HttpServletRequest req, HttpServletResponse res)
 	throws IOException, ServletException

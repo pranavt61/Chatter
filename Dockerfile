@@ -10,5 +10,7 @@ ADD conf/tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
 ADD webapps/chatter/WEB-INF /usr/local/tomcat/webapps/chatter/WEB-INF
 Add webapps/chatter/WEB-INF/classes/*.class /usr/local/tomcat/webapps/chatter/WEB-INF/classes/
 ADD webapps/chatter/*.jsp /usr/local/tomcat/webapps/chatter/
+ADD webapps/chatter/WEB-INF/lib/jstl-1.2.jar /usr/local/tomcat/webapps/WEB-INF/lib/
+#ADD webapps/jenkins.war /usr/local/tomcat/webapps/
 
 ENTRYPOINT ["bash"]

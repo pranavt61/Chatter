@@ -18,7 +18,8 @@ public class AuthController extends HttpServlet
 			//Add user ID for future Auth
 			session = req.getSession();
 			session.setAttribute("user", user);
-			view = req.getRequestDispatcher("Chatter");
+			req.setAttribute("user",user);
+			view = req.getRequestDispatcher("/List.jsp");
 		}
 		else
 		{

@@ -46,7 +46,7 @@ public class UserModel
 
 	public String name;
 	private String pass;
-	public LinkedList<ChatterModel> chatters;
+	public String chatter;
 	public int ID;
 
 	public UserModel(String n, String p)
@@ -54,10 +54,10 @@ public class UserModel
 		name = n;
 		pass = p;
 		ID = nextID++;
-		chatters = ChatterModel.getChattersofUser(this);
+		chatter = "Click Edit!";
 	}
 	public String getName(){return name;}
 	public int getID(){return ID;}
-	public LinkedList<ChatterModel> getChatters(){return chatters;}
+	public String getChatter(){return chatter;}
 
 }

@@ -9,16 +9,19 @@ public class ChatterController extends HttpServlet
 	{
 		HttpSession session = req.getSession(false);
 		RequestDispatcher view;
-		String name = "N/A";
 
+		//return valid chatter for user
+		UserModel user = session.getAttribute("user");
 
-		if(session == null)
-			//No user Logged in, send back to login
-			view = req.getRequestDispatcher("/index.jsp");
+		if(user != null)
+		{
+			req.setAttribute("user", user);
+			view = req.getRequestDispatcher("/List.jsp");
+
+		}
 		else
 		{
-			req.setAttribute("user",session.getAttribute("user"));
-			view = req.getRequestDispatcher("/List.jsp");
+			view = req.getRequestDispatcher("/index.jsp");
 		}
 
 		view.forward(req,res);
@@ -26,6 +29,22 @@ public class ChatterController extends HttpServlet
 	public void doPost(HttpServletRequest req, HttpServletResponse res)
 	throws IOException, ServletException
 	{
-		doGet(req,res);
+		HttpSession session = req.getSession(false);
+		RequestDispatcher view;
+
+		//Replace chatter here
+		UserModel user = session.getAttribute("user");
+
+		if(user != null)
+		{
+			user.chatter = req.getParameter("chatterText");
+			req.setAttribute("user", user);
+			view = req.getRequestDispatcher("/List.jsp");
+		}
+		else 
+		{
+			view = req.getRequestDispatcher("/index.jsp");
+		}
+		view.forward(req,res);
 	}
 }

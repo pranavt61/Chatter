@@ -49,6 +49,10 @@ function swap()
 <body>
 	<h1>Welcome</h1>
 	<button id="swapButton" onclick="swap()">Edit</button>
-	<p id="chatter">${user.chatter}</p>
+	<p id="chatter">${user.chatter}</p> <br />
+
+	<form action="/LogOut" method="GET">
+		<input type="submit" value="Log Out" />
+	</form>
 </body>
 </html>

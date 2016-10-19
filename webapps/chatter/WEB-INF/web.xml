@@ -45,4 +45,14 @@
 	<servlet-name>ChatterServlet</servlet-name>
 	<url-pattern>/Chatter</url-pattern>
 </servlet-mapping>
+
+<servlet>
+	<servlet-name>LogOutServlet</servlet-name>
+	<servlet-class>LogOutController</servlet-class>	
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>LogOutServlet</servlet-name>
+	<url-pattern>/LogOut</url-pattern>
+</servlet-mapping>
 </web-app>

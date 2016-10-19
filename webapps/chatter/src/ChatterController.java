@@ -11,7 +11,7 @@ public class ChatterController extends HttpServlet
 		RequestDispatcher view;
 
 		//return valid chatter for user
-		UserModel user = session.getAttribute("user");
+		UserModel user = (UserModel)session.getAttribute("user");
 
 		if(user != null)
 		{
@@ -33,7 +33,7 @@ public class ChatterController extends HttpServlet
 		RequestDispatcher view;
 
 		//Replace chatter here
-		UserModel user = session.getAttribute("user");
+		UserModel user = (UserModel)session.getAttribute("user");
 
 		if(user != null)
 		{

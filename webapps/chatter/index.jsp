@@ -1,7 +1,6 @@
-<html>
-<head>
-	<title>Chatter</title>
-</head>
+
+<%@include file="Header.jsp"%>
+
 <h1 align="center">Welcome to Chatter</h1>
 <div align = "center" >
 <form method="post" action="Login">
@@ -13,4 +12,5 @@
 	<input type="submit" value="New User">
 </form>
 </div>
-</html>
+
+<%@include file="Footer.jsp"%>

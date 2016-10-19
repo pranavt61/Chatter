@@ -56,6 +56,8 @@ public class UserModel
 		ID = nextID++;
 		chatter = "Click Edit!";
 	}
+
+	
 	public String getName(){return name;}
 	public int getID(){return ID;}
 	public String getChatter(){return chatter;}

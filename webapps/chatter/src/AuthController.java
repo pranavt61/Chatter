@@ -19,7 +19,7 @@ public class AuthController extends HttpServlet
 			session = req.getSession();
 			session.setAttribute("user", user);
 			req.setAttribute("user",user);
-			view = req.getRequestDispatcher("/index.jsp");
+			view = req.getRequestDispatcher("/List.jsp");
 		}
 		else
 		{

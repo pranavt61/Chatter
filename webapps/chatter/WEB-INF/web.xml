@@ -34,7 +34,7 @@
 </servlet>
 <servlet-mapping>
 	<servlet-name>AddUserServlet</servlet-name>
-	<url-pattern>/AddUser</url-pattern>
+	<url-pattern>/NewUser</url-pattern>
 </servlet-mapping>
 
 <servlet>

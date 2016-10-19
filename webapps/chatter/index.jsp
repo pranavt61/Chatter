@@ -1,7 +1,6 @@
 
 <%@include file="Header.jsp"%>
 
-<h1 align="center">Welcome to Chatter</h1>
 <div align = "center" >
 <form method="post" action="Login">
 	<p>User:</p><input name="username" type="text" /><br />

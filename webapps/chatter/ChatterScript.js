@@ -16,6 +16,8 @@ function swap()
 	}
 	else
 	{
+		var body = document.getElementsByTagName('body')[0];
+
 		button.innerHTML = 'view';
 		var form = document.createElement("form");
 		form.setAttribute('method', 'post');
@@ -29,13 +31,17 @@ function swap()
 		textBox.setAttribute('cols', '30');
 		textBox.innerHTML = chatter.innerHTML;
 
+		var br = document.createElement("br");
+
 		var submitButton = document.createElement("input");
 		submitButton.setAttribute('type', 'submit');
+		submitButton.setAttribute('value', 'Submit');
 
 		form.appendChild(textBox);
+		form.appendChild(br);
 		form.appendChild(submitButton);
 
-		document.getElementsByTagName('body')[0].appendChild(form);
+		body.insertBefore(form, document.getElementById('logOutButton'));
 
 		chatter.remove();
 	}

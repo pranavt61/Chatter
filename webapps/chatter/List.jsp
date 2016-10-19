@@ -8,7 +8,7 @@
 	<button id="swapButton" onclick="swap()">Edit</button>
 	<p id="chatter">${user.chatter}</p> <br />
 
-	<form action="/LogOut" method="GET">
+	<form action="LogOut" method="GET">
 		<input type="submit" value="Log Out" />
 	</form>
 </body>

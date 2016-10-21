@@ -8,7 +8,7 @@ public class ListController extends HttpServlet
 	throws IOException, ServletException
 	{
 		HttpSession session = req.getSession(false);
-		RequestDispatcher view;
+		RequestDispatcher view = req.getRequestDispatcher("/index.jsp");
 
 		UserModel user = (UserModel)session.getAttribute("user");
 

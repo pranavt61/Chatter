@@ -5,7 +5,7 @@ public class ChatterModel
 	public static LinkedList<ChatterModel> chatters = new LinkedList<ChatterModel>();
 	static int lastID = 0;
 
-	public ChatterModel[] getUserChatters(UserModel user)
+	public static ChatterModel[] getUserChatters(UserModel user)
 	{
 		ChatterModel[] userChatters = new ChatterModel[user.numChatters];
 		int chatterCounter = 0;
@@ -15,7 +15,7 @@ public class ChatterModel
 			if(chatterCounter >= user.numChatters)
 				break;
 
-			if(c.getOwnerID() == u.ID)
+			if(c.getOwnerID() == user.ID)
 				userChatters[chatterCounter++] = c;
 		}
 
@@ -25,7 +25,7 @@ public class ChatterModel
 			return userChatters;
 	}
 
-	public ChatterModel getChatterByID(UserModel user, int id)
+	public static ChatterModel getChatterByID(UserModel user, int id)
 	{
 		for(ChatterModel c: chatters)
 			if(c.chatterID == id && user.ID == c.ownerID)

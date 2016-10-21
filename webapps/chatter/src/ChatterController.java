@@ -15,9 +15,17 @@ public class ChatterController extends HttpServlet
 
 		if(user != null)
 		{
-			req.setAttribute("user", user);
-			view = req.getRequestDispatcher("/List.jsp");
-
+			ChatterModel chatter = ChatterModel.getChatterByID(user, req.getAttribute("chatterID"));
+			if(chatter != null)
+			{
+				req.setAttribute("user", user);
+				req.setAttribute("chatter", chatter);
+				view = req.getRequestDispatcher("/chatter.jsp");
+			}
+			else
+			{
+				view = req.RequestDispatcher("/List");
+			}
 		}
 		else
 		{
@@ -37,9 +45,13 @@ public class ChatterController extends HttpServlet
 
 		if(user != null)
 		{
-			user.chatter = req.getParameter("chatterText");
-			req.setAttribute("user", user);
-			view = req.getRequestDispatcher("/List.jsp");
+			ChatterModel chatter = ChatterModel.getChatterByID(user, req.getAttribute("chatterID"));
+			if(chatter != null)
+			{
+				chatter.setMessage(req.getParameter("chatter"));
+			}
+
+			view = req.getRequestDispatcher("/List");
 		}
 		else 
 		{

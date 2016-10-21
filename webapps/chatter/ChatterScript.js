@@ -3,14 +3,20 @@ function swap()
 	var body = document.getElementsByTagName('body')[0];
 	var button = document.getElementById("swapButton");
 	var chatter = document.getElementById("chatter");
+	var title = document.getElementById("chatterTitle");
 
 	if(button.innerHTML == 'view')
 	{
 
 		button.innerHTML = 'edit';
+
+		var chatterTitleView = document.createElement("h3");
+		chatterTitle.innerHTML = title.innerHTML;
+
 		var chatterView = document.createElement("p");
 		chatterView.setAttribute('id', 'chatter');
 		chatterView.innerHTML = chatter.innerHTML;
+		
 		document.getElementById("chatterForm").remove();
 
 		body.insertBefore(chatterView, document.getElementById('logOutButton'));
@@ -23,6 +29,8 @@ function swap()
 		form.setAttribute('method', 'post');
 		form.setAttribute('action', 'Chatter');
 		form.setAttribute('id', 'chatterForm');
+
+		var chatterTitleView = document.createElement("");
 
 		var textBox = document.createElement("textarea");
 		textBox.setAttribute('name', 'chatterText');

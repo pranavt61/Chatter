@@ -15,7 +15,7 @@ public class ChatterController extends HttpServlet
 
 		if(user != null)
 		{
-			ChatterModel chatter = ChatterModel.getChatterByID(user, (int)(req.getAttribute("chatterID"));
+			ChatterModel chatter = ChatterModel.getChatterByID(user, (int)(req.getAttribute("chatterID")));
 			if(chatter != null)
 			{
 				req.setAttribute("user", user);

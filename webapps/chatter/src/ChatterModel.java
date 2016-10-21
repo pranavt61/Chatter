@@ -25,7 +25,7 @@ public class ChatterModel
 			return userChatters;
 	}
 
-	public getChatterByID(UserModel user, int id)
+	public ChatterModel getChatterByID(UserModel user, int id)
 	{
 		for(ChatterModel c: chatters)
 			if(c.chatterID == id && user.ID == c.ownerID)

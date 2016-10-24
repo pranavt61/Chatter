@@ -4,13 +4,13 @@
 <h2>${user.name}</h2>
 
 <table>
-<c:forEach var="chatter" items="${chatterArray}">
+<% for(int i = 0; i < chatterArray.length; i++) { %>
 	<tr>
-		<td><strong>${chatter.title}</strong></td>
-		<td>${chatter.message}</td>
+		<td><strong><%=chatterArray[i].title%></strong></td>
+		<td><%=chatterArray[i].message%></td>
 		<td><form method="GET" action="Chatter?chatterID=${chatter.chatterID}"><input type="submit" value="Edit"></input></form></td>
 	</tr>
-</c:forEach>
+<% } %>
 </table>
 
 <form method="GET" action="Logout">

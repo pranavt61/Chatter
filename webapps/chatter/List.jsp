@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="/WEB-INF/lib/jstl-1.2.jar" %>
+<!-- <%@ taglib prefix="c" uri="/WEB-INF/lib/jstl-1.2.jar" %> -->
 
 <%@include file="Header.jsp"%>
 <h2>${user.name}</h2>

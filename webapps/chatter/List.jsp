@@ -1,19 +1,11 @@
-<!-- <%@ taglib prefix="c" uri="/WEB-INF/lib/jstl-1.2.jar" %> -->
-
+<script src="ChatterScript.js"></script>
 <%@include file="Header.jsp"%>
-<h2>${user.name}</h2>
 
-<table>
-<% for(int i = 0; i < chatterArray.length; i++) { %>
-	<tr>
-		<td><strong><%=chatterArray[i].title%></strong></td>
-		<td><%=chatterArray[i].message%></td>
-		<td><form method="GET" action="Chatter?chatterID=${chatter.chatterID}"><input type="submit" value="Edit"></input></form></td>
-	</tr>
-<% } %>
-</table>
+	<button id="swapButton" onclick="swap()">Edit</button>
+	<p id="chatter">${user.chatter}</p> <br />
 
-<form method="GET" action="Logout">
-	<input type="submit" value="Log Out"> </input>
-</form>
+	<form id="logOutButton" action="LogOut" method="GET">
+		<input type="submit" value="Log Out" />
+	</form>
+
 <%@include file="Footer.jsp"%>

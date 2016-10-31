@@ -55,14 +55,4 @@
 	<servlet-name>LogOutServlet</servlet-name>
 	<url-pattern>/LogOut</url-pattern>
 </servlet-mapping>
-
-<servlet>
-	<servlet-name>ListServlet</servlet-name>
-	<servlet-class>ListController</servlet-class>	
-</servlet>
-
-<servlet-mapping>
-	<servlet-name>ListServlet</servlet-name>
-	<url-pattern>/List</url-pattern>
-</servlet-mapping>
 </web-app>

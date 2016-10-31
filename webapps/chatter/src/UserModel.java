@@ -46,27 +46,20 @@ public class UserModel
 
 	public String name;
 	private String pass;
-	//public String chatter;
+	public String chatter;
 	public int ID;
-	public int numChatters;
 
 	public UserModel(String n, String p)
 	{
 		name = n;
 		pass = p;
 		ID = nextID++;
-		numChatters = 0;
-
-		users.add(this);
+		chatter = "Click Edit!";
 	}
 
-	public void addChatter(String title, String message)
-	{
-		new ChatterModel(this, title, message);
-		numChatters++;
-	}
 	
 	public String getName(){return name;}
 	public int getID(){return ID;}
+	public String getChatter(){return chatter;}
 
 }

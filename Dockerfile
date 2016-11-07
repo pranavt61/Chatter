@@ -14,4 +14,4 @@ ADD webapps/chatter/*.jsp /usr/local/tomcat/webapps/chatter/
 ADD webapps/chatter/*.js /usr/local/tomcat/webapps/chatter/
 #ADD webapps/jenkins.war /usr/local/tomcat/webapps/
 
-ENTRYPOINT ["bash"]
+ENTRYPOINT ["catalina.sh","run"]

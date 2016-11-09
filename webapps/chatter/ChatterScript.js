@@ -1,6 +1,6 @@
 function swap()
 {
-	var body = document.getElementsById('body');
+	var body = document.getElementById('body');
 	var button = document.getElementById("swapButton");
 	var chatter = document.getElementById("chatter");
 

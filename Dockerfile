@@ -14,5 +14,7 @@ ADD conf/tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
 #ADD webapps/chatter/*.js /usr/local/tomcat/webapps/chatter/
 
 ADD webapps/*.zip /usr/local/tomcat/webapps/
+#ADD webapps/*.war /usr/local/tomcat/webapps/
+#ADD webapps/*/jar /usr/local/tomcat/webapps/
 
 ENTRYPOINT ["catalina.sh","run"]

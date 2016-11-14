@@ -4,5 +4,5 @@
 	<title>Chatter</title>
 </head>
 <body>
-
-	<h1 align="center">Chatter</h1>
+<div id="body" align="center">
+	<h1>Chatter</h1>
